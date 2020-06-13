@@ -1,0 +1,13 @@
+CSS Animations Series
+https://www.youtube.com/playlist?list=PLqGj3iMvMa4LvJ8VctoXnPI0dtE40wfid
+
+https://github.com/Annie-Huang/css-animations-series
+=============================================================
+
+example1:
+CSS Transition (CSS Animations Series Part 1)
+
+
+
+
+
