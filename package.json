@@ -1,0 +1,21 @@
+{
+  "name": "css-animations-series",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "start-alternative": "lite-server --startPath=example1.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annie-Huang/css-animations-series.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Annie-Huang/css-animations-series/issues"
+  },
+  "homepage": "https://github.com/Annie-Huang/css-animations-series#readme"
+}
