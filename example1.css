@@ -24,6 +24,12 @@ body {
 /*    transform: translate(200px, 150px) rotate(20deg);*/
 /*}*/
 
-.trigger:hover .box {
+/* Triggered by Hover */
+/*.trigger:hover .box {*/
+/*    transform: translate(200px, 150px) rotate(20deg);*/
+/*}*/
+
+/* Triggered by click */
+.trigger.clicked .box {
     transform: translate(200px, 150px) rotate(20deg);
 }
