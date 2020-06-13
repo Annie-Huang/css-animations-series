@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+}
+
+/* Note is in C:\react\JavaScriptAnimation.txt */
+
+.trigger {
+    width: 200px;
+    height: 200px;
+    border: 20px solid #999;
+    background: #ddd;
+}
+
+.box {
+    display: inline-block;
+    background: pink;
+    width: 200px;
+    height: 200px;
+    transition: transform 300ms ease-in-out;
+    /*pointer-events: none;*/
+}
+
+/*.box:hover {*/
+/*    transform: translate(200px, 150px) rotate(20deg);*/
+/*}*/
+
+.trigger:hover .box {
+    transform: translate(200px, 150px) rotate(20deg);
+}
