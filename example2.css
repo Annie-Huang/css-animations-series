@@ -23,12 +23,25 @@ body {
     }
 }
 
+/*@keyframes myframe {*/
+/*    0% {*/
+/*        height: 200px;*/
+/*    }*/
+/*    30% {*/
+/*        width: 400px;*/
+/*    }*/
+/*    100% {*/
+/*        height: 600px;*/
+/*        background: orange;*/
+/*    }*/
+/*}*/
+
 @keyframes myframe {
     0% {
         height: 200px;
     }
-    30% {
-        width: 400px;
+    30%, 70% {
+        height: 400px;
     }
     100% {
         height: 600px;
