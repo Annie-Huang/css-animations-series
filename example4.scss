@@ -61,6 +61,7 @@ li:hover > ul.drop-menu li {
 }
 
 // MENU 1 ---------------
+// Make it like they all rotate at the same time, but each one slower than their previous one.
 li:hover > ul.drop-menu.menu-1 {
   perspective: 1000px;
 
@@ -86,7 +87,27 @@ li:hover > ul.drop-menu.menu-1 {
         animation: {
           name: menu1;
           duration: 300ms * $i;
-          //duration: 2s;
+          timing-function: ease-in-out;
+          fill-mode: forwards;
+        }
+      }
+    }
+
+  }
+}
+
+// MENU 11 ---------------
+// Make it like it rotate at the same speed but each one delays a bit from the previous one
+li:hover > ul.drop-menu.menu-11 {
+  perspective: 1000px;
+  li {
+    opacity: 0;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation: {
+          name: menu1;
+          duration: 300ms;
+          delay: (150ms * $i) - 300ms;
           timing-function: ease-in-out;
           fill-mode: forwards;
         }
