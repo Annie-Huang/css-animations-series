@@ -16,3 +16,6 @@ CSS Animation & Keyframes (CSS Animations Series Part 2)
 example4:
 Drop Down Menu — CSS Animations
 
+example5:
+Notifications, Alerts, Menus — CSS Animations
+
