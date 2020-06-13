@@ -67,6 +67,7 @@ li:hover > ul.drop-menu.menu-1 {
   li {
     opacity: 0;
 
+    /*
     animation: {
       name: menu1;
       //duration: 300ms;
@@ -78,6 +79,20 @@ li:hover > ul.drop-menu.menu-1 {
       // We want it to stay at the end state, which we will use forward
       fill-mode: forwards;
     };
+    */
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation: {
+          name: menu1;
+          duration: 300ms * $i;
+          //duration: 2s;
+          timing-function: ease-in-out;
+          fill-mode: forwards;
+        }
+      }
+    }
+
   }
 }
 

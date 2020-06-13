@@ -57,8 +57,53 @@ li:hover > ul.drop-menu.menu-1 {
 }
 li:hover > ul.drop-menu.menu-1 li {
   opacity: 0;
+  /*
+  animation: {
+    name: menu1;
+    //duration: 300ms;
+    duration: 2s;
+    timing-function: ease-in-out;
+
+    // you need to have this because animation-fill-mode by default is none, meant i will jump to the state
+    // of no animation, in our case, it will be background: #d5d5d5; (line 24) if you continue to hover on the "Style 1" header
+    // We want it to stay at the end state, which we will use forward
+    fill-mode: forwards;
+  };
+  */
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(1) {
   animation-name: menu1;
-  animation-duration: 2s;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(2) {
+  animation-name: menu1;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(3) {
+  animation-name: menu1;
+  animation-duration: 900ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(4) {
+  animation-name: menu1;
+  animation-duration: 1200ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(5) {
+  animation-name: menu1;
+  animation-duration: 1500ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+li:hover > ul.drop-menu.menu-1 li:nth-child(6) {
+  animation-name: menu1;
+  animation-duration: 1800ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
