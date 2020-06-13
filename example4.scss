@@ -223,7 +223,37 @@ li:hover > ul.drop-menu.menu-3 {
 }
 
 
+// MENU 4 ---------------
+// Make it flips in from top right corner
+li:hover > ul.drop-menu.menu-4 {
+  perspective: 1000px;
+  li {
+    opacity: 0;
+    transform-origin: top right;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation: {
+          name: menu4;
+          duration: 300ms;
+          delay: (150ms * $i) - 300ms;
+          timing-function: ease-in-out;
+          fill-mode: forwards;
+        }
+      }
+    }
+  }
+}
 
+@keyframes menu4 {
+  0% {
+    opacity: 0;
+    transform: rotate(-30deg) translateX(30px); // the translateX will make it seem original further from the right
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+}
 
 
 
