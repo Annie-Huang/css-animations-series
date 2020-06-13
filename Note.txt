@@ -10,7 +10,7 @@ Which .html file to monitor is set in bs-config.json
 example1:
 CSS Transition (CSS Animations Series Part 1)
 
-example2:
+example2, example3(good way to introduce a element into the screen):
 CSS Animation & Keyframes (CSS Animations Series Part 2)
 
 
