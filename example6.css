@@ -66,6 +66,10 @@ h1 {
   left: 50%;
   margin-left: -10px;
 }
+.spinner-2:after {
+  top: auto;
+  bottom: -10px;
+}
 
 @keyframes spin {
   0% {

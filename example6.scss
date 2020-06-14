@@ -70,9 +70,14 @@ h1 {
     position: absolute;
 
     // This three properties are to make the top middle tip of the .spinner and middle of the &:before to be in the same position.
-    top: -10px;
+    top: -10px; // negative of top is going up
     left: 50%;
     margin-left: -10px;
+  }
+
+  &:after {
+    top: auto; // reset top value in order to inject bottom value below...
+    bottom: -10px; // negative of bottom is going down
   }
 }
 
