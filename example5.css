@@ -410,6 +410,10 @@ section {
   }
   15%, 85% {
     transform: translateX(0%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-4%) rotate(-4deg);
   }
   100% {
     transform: translateX(200%) rotate(90deg);
