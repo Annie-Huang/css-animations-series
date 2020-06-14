@@ -293,6 +293,7 @@ section {
   transform: rotateY(90deg);
   transition: all 500ms ease-in-out 1000ms;
   transform-origin: left center;
+  opacity: 0;
 }
 .section-alert .alert-element.is-active {
   opacity: 1;
@@ -304,6 +305,7 @@ section {
 }
 .section-alert .alert-element.is-active .text {
   transform: rotateY(0deg);
+  opacity: 1;
 }
 
 .section-modal {

@@ -271,7 +271,7 @@ section {
       // You may need to click a few things to see the effect, for some reason it doesn't apply the the page straight away.
       transition: all 500ms ease-in-out 1000ms;
       transform-origin: left center; // You don't really need to center because it's flipping in the Y-axles
-      //opacity: 0;
+      opacity: 0;
     }
 
     &.is-active {
@@ -288,7 +288,7 @@ section {
       // Added during Toturial:
       .text {
         transform: rotateY(0deg);
-        //opacity: 1;
+        opacity: 1;
       }
     }
   }
