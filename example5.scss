@@ -413,7 +413,7 @@ section {
 @keyframes modalAnim {
   0% {
     //transform: translateX(-200%) rotate(-90deg);
-    transform: translateX(-200%);
+    transform: translateX(-200%) rotate(-90deg);
     //opacity: 0;
   }
   //10% {
@@ -428,7 +428,7 @@ section {
   //}
   100% {
     //transform: translateX(200%) rotate(90deg);
-    transform: translateX(-200%);
+    transform: translateX(-200%) rotate(-90deg);
   }
 }
 
