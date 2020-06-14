@@ -66,6 +66,12 @@ h1 {
     height: 20px;
     width: 20px;
     background: orangered;
+    position: absolute;
+
+    // This three properties are to make the top middle tip of the .spinner and middle of the &:before to be in the same position.
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
   }
 }
 
