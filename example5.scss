@@ -270,7 +270,7 @@ section {
       // 1000ms is the 400ms+600ms in line 258 for the icon. We want the rotationY in .text is done after .icon is fully in place
       // You may need to click a few things to see the effect, for some reason it doesn't apply the the page straight away.
       transition: all 500ms ease-in-out 1000ms;
-      //transform-origin: left center;
+      transform-origin: left center; // You don't really need to center because it's flipping in the Y-axles
       //opacity: 0;
     }
 
