@@ -35,7 +35,13 @@ h1 {
 }
 
 .spinner-1:after {
-
+  background: pink;
+  position: absolute;
+  top: -4px;  // It needs to -4px because there is a 4px border
+  left: -4px;
+  border: 4px solid transparent;
+  border-top-color: orangered;
+  border-bottom-color: orangered;
 }
 
 
