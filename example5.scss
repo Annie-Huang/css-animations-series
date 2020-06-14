@@ -41,6 +41,9 @@ section {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
     position: relative;
+
+    // Added during Toturial:
+    // This is to transition the property change between normal and .is-active
     transition: all 200ms ease-in-out;
     perspective: 1000px;
 
@@ -59,8 +62,10 @@ section {
 
       .notifications {
         display: flex;
+        // Added during Toturial:
         animation: note 800ms ease-in-out forwards;
-        transform-origin: center 60px;
+        //animation: note 5s ease-in-out forwards;  // 3s let you check your effect more closerly.
+        transform-origin: center 60px; // If you do center bottom, it will feel like start from the bottom edge of the green recentage menu
       }
     }
   }
@@ -112,12 +117,17 @@ section {
   }
 }
 
+// Added during Toturial:
+// The rotate from 30deg > -10deg > 3deg, the bounding is from the idea from "The Illusion Of Life" by Cento Lodigiani | Disney Favorite
 @keyframes note {
   0% {
     opacity: 0;
+    // The translateY(50px) gives it a more exaggeration that it's coming from the bottom
+    // rotateX(90deg) will give the object a more dist-orientated feel, it's like your head heading a bit (rotate on x-axles)
     transform: scale(0.1) rotate(30deg) translateY(50px) rotateX(90deg);
   }
   50% {
+    // Again past to a negative degree for rotateX give s amore exaggerated effect (bouncing).
     transform: rotate(-10deg) rotateX(-2deg);
     opacity: 1;
   }
