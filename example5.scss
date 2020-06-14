@@ -393,7 +393,7 @@ section {
 
       // Added during Toturial:
       .modal {
-        //animation: modalAnim 5s ease-in-out forwards;
+        animation: modalAnim 5s ease-in-out forwards;
       }
     }
   }
@@ -412,21 +412,23 @@ section {
 // Added during Toturial:
 @keyframes modalAnim {
   0% {
-    transform: translateX(-200%) rotate(-90deg);
-    opacity: 0;
+    //transform: translateX(-200%) rotate(-90deg);
+    transform: translateX(-200%);
+    //opacity: 0;
   }
-  10% {
-    transform: translateX(4%) rotate(4deg);
-  }
-  15%, 85% {
+  //10% {
+  //  transform: translateX(4%) rotate(4deg);
+  //}
+  15%, 85% { // Need to match the 15%, 85% in overlayAdnim
     transform: translateX(0%);
-    opacity: 1;
+    //opacity: 1;
   }
-  90% {
-    transform: translateX(-4%) rotate(-4deg);
-  }
+  //90% {
+  //  transform: translateX(-4%) rotate(-4deg);
+  //}
   100% {
-    transform: translateX(200%) rotate(90deg);
+    //transform: translateX(200%) rotate(90deg);
+    transform: translateX(-200%);
   }
 }
 
