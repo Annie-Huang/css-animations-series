@@ -89,5 +89,15 @@ h1 {
     transform: translateY(30px);
   }
 }
+.spinner-3 {
+  background: none;
+  border: 4px solid #eee;
+}
+.spinner-3:after {
+  width: 4px;
+  height: 80px;
+  background: orangered;
+  border-radius: 4px;
+}
 
 /*# sourceMappingURL=example6.css.map */
