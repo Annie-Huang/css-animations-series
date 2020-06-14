@@ -266,6 +266,9 @@ section {
   align-items: stretch;
   padding-right: 20px;
   perspective: 1000px;
+  transform-origin: bottom left;
+  transform: rotate(90deg) scale(0.5);
+  transition: all 500ms ease-in-out;
 }
 .section-alert .alert-element .icon {
   padding: 20px;
@@ -283,6 +286,7 @@ section {
 }
 .section-alert .alert-element.is-active {
   opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 .section-modal {
   position: relative;
