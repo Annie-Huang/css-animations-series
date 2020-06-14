@@ -43,7 +43,8 @@ h1 {
   border-top-color: orangered;
   border-bottom-color: orangered;
 
-  animation: spinny 2s linear infinite;
+  //animation: spinny 2s linear infinite;
+  animation: spinny 1s linear infinite;
 }
 
 @keyframes spinny {
@@ -51,7 +52,8 @@ h1 {
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) scale(1.2); // You do have to have the rotate(180deg), without it, it is just like rotate(0)
+    //transform: rotate(180deg) scale(1.2); // You do have to have the rotate(180deg), without it, it is just like rotate(0)
+    transform: rotate(45deg) scale(1.2); // You do have to have the rotate(180deg), without it, it is just like rotate(0)
   }
   100% {
     transform: rotate(360deg) scale(1);
