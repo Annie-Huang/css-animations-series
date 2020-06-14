@@ -61,7 +61,13 @@ h1 {
 }
 
 
-
+.spinner-2 {
+  &:before, &:after {
+    height: 20px;
+    width: 20px;
+    background: orangered;
+  }
+}
 
 
 
