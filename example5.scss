@@ -238,9 +238,10 @@ section {
     transform-origin: bottom left;
     //transform: rotate(90deg) scale(0.5) translate(100px, -300px) rotateX(90deg);
     // Growing is always a good animation effect
-    transform: rotate(90deg) scale(0.5);
+    transform: rotate(90deg) scale(0.5) translate(100px, -300px) rotateX(90deg);
     //transition: all 450ms cubic-bezier(0, 0.6, 0.35, 1.4);
-    transition: all 500ms ease-in-out;
+    //transition: all 500ms ease-in-out;
+    transition: all 500ms cubic-bezier(0, 0.71, 0.45, 1.5);
 
     .icon {
       padding: 20px;
