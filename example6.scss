@@ -78,6 +78,7 @@ h1 {
   &:after {
     top: auto; // reset top value in order to inject bottom value below...
     bottom: -10px; // negative of bottom is going down
+    animation: bouncy 0.5s ease-in infinite;
   }
 }
 
@@ -90,7 +91,14 @@ h1 {
   }
 }
 
-
+@keyframes bouncy {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
 
 
 
