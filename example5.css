@@ -405,6 +405,9 @@ section {
   0% {
     transform: translateX(-200%) rotate(-90deg);
   }
+  10% {
+    transform: translateX(4%) rotate(4deg);
+  }
   15%, 85% {
     transform: translateX(0%);
   }
