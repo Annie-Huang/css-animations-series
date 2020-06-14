@@ -73,6 +73,7 @@ h1 {
     top: -10px; // negative of top is going up
     left: 50%;
     margin-left: -10px;
+    animation: bouncy 1s ease-in infinite;
   }
 
   &:after {

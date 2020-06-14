@@ -65,6 +65,7 @@ h1 {
   top: -10px;
   left: 50%;
   margin-left: -10px;
+  animation: bouncy 1s ease-in infinite;
 }
 .spinner-2:after {
   top: auto;
