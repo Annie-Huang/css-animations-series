@@ -95,9 +95,13 @@ h1 {
 }
 .spinner-3:after {
   width: 4px;
-  height: 80px;
+  height: 66px;
   background: orangered;
-  border-radius: 4px;
+  border-radius: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -2px;
 }
 
 /*# sourceMappingURL=example6.css.map */
