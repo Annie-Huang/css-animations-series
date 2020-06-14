@@ -115,6 +115,9 @@ h1 {
     top: 50%;
     left: 50%;
     margin-left: -2px; // because the width is 4px
+
+    transform-origin: top center;
+    animation: spin 2s linear infinite;
   }
 }
 
