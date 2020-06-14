@@ -389,10 +389,6 @@ section {
   display: flex;
   animation: overlayAnim 5s ease-in-out forwards;
 }
-.section-modal .overlay.is-active .modal {
-  animation: modalAnim 5s ease-in-out forwards;
-}
-
 @keyframes overlayAnim {
   0%, 100% {
     background-color: rgba(0, 0, 0, 0);

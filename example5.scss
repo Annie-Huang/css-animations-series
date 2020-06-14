@@ -388,15 +388,18 @@ section {
 
     &.is-active {
       display: flex;
-      animation: overlayAnim 5s ease-in-out forwards;
+      // Added during Toturial:
+      animation: overlayAnim 5s ease-in-out forwards; // 5s is the timeout from the javascript.
 
+      // Added during Toturial:
       .modal {
-        animation: modalAnim 5s ease-in-out forwards;
+        //animation: modalAnim 5s ease-in-out forwards;
       }
     }
   }
 }
 
+// Added during Toturial:
 @keyframes overlayAnim {
   0%, 100% {
     background-color: rgba(0, 0, 0, 0);
@@ -406,7 +409,7 @@ section {
   }
 }
 
-
+// Added during Toturial:
 @keyframes modalAnim {
   0% {
     transform: translateX(-200%) rotate(-90deg);
