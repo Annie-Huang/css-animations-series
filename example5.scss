@@ -236,7 +236,6 @@ section {
 
     // Added during Toturial:
     transform-origin: bottom left;
-    //transform: rotate(90deg) scale(0.5) translate(100px, -300px) rotateX(90deg);
     // Growing is always a good animation effect
     transform: rotate(90deg) scale(0.5) translate(100px, -300px) rotateX(90deg);
 
@@ -252,6 +251,7 @@ section {
       border-radius: 4px 0px 0px 4px;
       overflow: hidden;
 
+      // Added during Toturial:
       i {
         transform: scale(0.2) translateY(50px);
         opacity: 0;
@@ -265,8 +265,11 @@ section {
       display: flex;
       align-items: center;
       border-radius: 0px 4px 4px 0px;
-      //transform: rotateY(90deg);
-      //transition: all 500ms ease-in-out 1000ms;
+      // Added during Toturial:
+      transform: rotateY(90deg);
+      // 1000ms is the 400ms+600ms in line 258 for the icon. We want the rotationY in .text is done after .icon is fully in place
+      // You may need to click a few things to see the effect, for some reason it doesn't apply the the page straight away.
+      transition: all 500ms ease-in-out 1000ms;
       //transform-origin: left center;
       //opacity: 0;
     }
@@ -276,13 +279,15 @@ section {
       // Added during Toturial:
       transform: rotate(0deg) scale(1);
 
+      // Added during Toturial:
       i {
         transform: scale(1) translateY(0px);
         opacity: 1;
       }
 
+      // Added during Toturial:
       .text {
-        //transform: rotateY(0deg);
+        transform: rotateY(0deg);
         //opacity: 1;
       }
     }

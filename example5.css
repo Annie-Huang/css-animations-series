@@ -290,6 +290,8 @@ section {
   display: flex;
   align-items: center;
   border-radius: 0px 4px 4px 0px;
+  transform: rotateY(90deg);
+  transition: all 500ms ease-in-out 1000ms;
 }
 .section-alert .alert-element.is-active {
   opacity: 1;
@@ -299,6 +301,10 @@ section {
   transform: scale(1) translateY(0px);
   opacity: 1;
 }
+.section-alert .alert-element.is-active .text {
+  transform: rotateY(0deg);
+}
+
 .section-modal {
   position: relative;
   overflow: hidden;
