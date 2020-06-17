@@ -208,18 +208,35 @@ h1 {
     position: absolute;
     top: 50%;
     margin-top: -34px;
+    animation: topchomp 1s ease-out infinite;
   }
 
   &:after {
-    left: 80px;
+    //left: 80px;
     border-color: orangered;
     border-top-color: transparent;
     border-right-color: transparent;
+    animation: bottomchomp 1s ease-out infinite;
   }
 }
 
+@keyframes topchomp {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(37deg);
+  }
+}
 
-
+@keyframes bottomchomp {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+}
 
 
 
