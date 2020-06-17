@@ -163,5 +163,21 @@ h1 {
     transform: translateY(-30px);
   }
 }
+.loader {
+  width: 300px;
+  height: 10px;
+  background: #eee;
+  display: inline-block;
+  position: relative;
+}
+.loader:before, .loader:after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border: 30px solid orangered;
+  border-radius: 50%;
+  border-right-color: transparent;
+}
 
 /*# sourceMappingURL=example6.css.map */
