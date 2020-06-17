@@ -106,4 +106,8 @@ h1 {
   animation: spin 2s linear infinite;
 }
 
+.spinner-4:before, .spinner-4after {
+  background: orangered;
+}
+
 /*# sourceMappingURL=example6.css.map */
