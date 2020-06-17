@@ -21,3 +21,6 @@ Notifications, Alerts, Menus — CSS Animations
 
 example6:
 Spinners, Loaders, and Junk — CSS Animations
+
+example7:
+Step By Step Form — CSS Animations
