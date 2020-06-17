@@ -208,7 +208,7 @@ h1 {
     position: absolute;
     top: 50%;
     margin-top: -34px;
-    animation: topchomp 1s ease-out infinite;
+    animation: topchomp 1s ease-out infinite, moveChomp 3s linear infinite;
   }
 
   &:after {
@@ -216,7 +216,7 @@ h1 {
     border-color: orangered;
     border-top-color: transparent;
     border-right-color: transparent;
-    animation: bottomchomp 1s ease-out infinite;
+    animation: bottomchomp 1s ease-out infinite, moveChomp 3s linear infinite;
   }
 }
 
@@ -238,7 +238,14 @@ h1 {
   }
 }
 
-
+@keyframes moveChomp {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
 
 
 
