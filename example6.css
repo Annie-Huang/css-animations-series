@@ -113,7 +113,11 @@ h1 {
   margin-top: -50px;
   margin-left: -50px;
   background: orangered;
-  animation: pluse 2s linear infinite;
+  animation: pluse 3s linear infinite;
+  opacity: 0;
+}
+.spinner-4:after {
+  animation: pluse 2s linear 2.3s infinite;
 }
 
 @keyframes pluse {
