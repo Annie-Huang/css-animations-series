@@ -124,6 +124,11 @@ h1 {
 
 .spinner-4 {
   &:before, &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
     background: orangered;
     animation: pluse 2s linear infinite;
   }
