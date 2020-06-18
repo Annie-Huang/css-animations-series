@@ -1,0 +1,262 @@
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
+"The Illusion Of Life" by Cento Lodigiani | Disney Favorite (https://www.youtube.com/watch?v=jn5OB12u8Pw)	<< it's important to add the bounce effect to similar motion.
+https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/
+
+############################################################################
+
+Four things really cheaply: position, scale, rotation and opacity
+-----------------------------------------------------------------------
+Use opacity to change color rather than using a new color
+You should always look to avoid animating properties that will trigger layout or paints, both of which are expensive and may lead to skipped frames
+- layout: width	height padding margin display border-width border top position font-size float text-align overflow-y font-weight overflow left font-family line-height vertical-align	right clear white-space bottom	min-height
+- paint: color border-style visibility background text-decoration background-image background-position background-repeat outline-color outline outline-style border-radius outline-width box-shadow background-size
+
+
+animation:
+--------------
+Orientation | Functional Change (e.g. toggle button, hamburger menu change to X when clicking) | New Element (accordion content appearing)
+| Highlight (something flashing in page to catch attention) | Visual Feedback | System Status (progress bar)
+
+
+trasition:
+--------------------
+transition: <property> <duration> <timing-function> <delay>;
+.element {
+    transition: opacity 300ms ease-in-out 1s;
+}
+you can have multiple transition just seperate it by ";"
+
+animatable properties: font-size, background-color, width, left
+not animatable properties: display, font-family position
+Performant properties (Modern browsers can animate four things really cheaply): position, scale, rotation and opacity
+
+
+Triggering animiation
+---------------------------
+1. Hover pseudo class
+2. Class changes
+
+<div class="trigger">
+    <div class="box"></div>
+</div>
+
+.trigger {...}
+.box {
+								<< Original state has not transition, it's in the original location of (0,0)
+    transition: transform 300ms ease-in-out;
+    pointer-events: none;					<< pointer-events
+}
+.trigger:hover .box {
+    transform: translate(200px, 150px) rotate(20deg)		<< This is the final destination position and state we want to be in (left:200px, down 150px, rotate 20deg)
+}
+
+- Need to do it on the container (.trigger) level otherwise the hover area is moving with the box. You will see the poink box keep shaking when you hover.
+- Need to use the pointer-events to indicate the hover and click event will not register on the box area, but only on the .trigger area. Otherwise you will see the pink box not moving back if you hover on it (already outside the grey box)
+
+
+.trigger.clicked .box {
+    transform: translate(200px, 150px) rotate(20deg);
+}
+const triggerbox = document.querySelector('.trigger');
+triggerbox.addEventListener("click", () => {
+    triggerbox.classList.toggle("clicked");			<< triggered by changing class.
+});
+
+timing-function
+----------------------
+e.g. ease-in-out
+if you go to chrome dev tool and if you click on the icon of the style css on the ease-in-out, you will see the movement graph of this movement.
+
+pointer-events
+-----------------------
+The pointer-events CSS property sets under what circumstances (if any) a particular graphic element can become the target of pointer events.
+
+
+key-framme
+------------------
+In root directory, not inside a selector
+
+@keyframes [name] {
+  from {
+    [styles];
+  }
+  to {
+    [styles];
+  }
+}
+
+@keyframes myframe {
+    0% {[styles];}
+    30%, 70% {[styles];}
+    50% {[styles];}
+    100% {[styles];}
+}
+
+@keyframes myframe {
+    0% {[styles];}
+    30%, 70% {[styles];}	<< you could have a pausing effect by keep two consective keyframe the same value.
+    100% {[styles];}
+}
+
+
+animation:
+-------------------
+animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]
+name should be a @keyframe name
+
+.element {
+ animation: myframes 2s ease-in-out 0s infinite normal forwards paused;
+}
+
+.element {
+  animation-name: myframe;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite | 3;
+  animation-direction: normal | reverse | alternate;
+  animation-fill-mode: forwards | backwards;			<< forward means once animiation stop, we will stay in its final state. backward means we will stay in its initial state once it finishes.
+  animation-play-state: running;				<< pause allow you to pause the animation, it's usually added as part of the javascript trigger.
+}
+
+You can also do like this:
+.element {
+  animation: {
+    name: menu1;
+    duration: 300ms;
+    timing-function: ease-in-out;
+  };
+}
+
+animation-duration
+------------------------
+The prime time for things to happen or where people don't get impatient but they're still interested is in  250m - 400m so a 300 millisecond animation
+This is the perfect location that allow you to see the effect closely. Just increate it to a 3s so you can see if the new things you added are correct or not.
+
+
+animation-play-state: running | paused
+-----------------------------------------
+.box {animation: myframe 2s ease-in-out 0s infinite;}
+.box.ispaused {
+    animation-play-state: paused;
+}
+
+box.addEventListener("click", () => {
+    box.classList.toggle("ispaused");				<< pause animation on a click
+});
+
+
+animation-fill-mode: forwards | backwards | both | none (default)
+---------------------------------------------------------------------
+none: means it stays as there is not animation triggered in the element:
+forward: means it stays as the last state of the animation.
+backward: means it stays as the initial state of the animation.
+
+animation: rotate 7.5s linear forwards infinite;	<< Continue to rotate after the first circle
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+transform-origin: center | top left | 50px 50px (this is from top left corner) | bottom right 60px
+-------------------------------------------------------------------------------------------------------------------
+Three-value syntax:
+The third value must be a <length>. It always represents the Z offset.
+
+
+
+Make things bigger and smaller:
+----------------------------------------------
+.container.grow {
+    animation: grow 3s linear forwards;
+}
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+Bouncing effect:
+-------------------------
+It's important to simulate motion effect as leave life. 
+E.g., when something doing a rotation and it stops, rotation it a bit over before it bounce back.
+      when something is about to start to move, move backward a bit before it move forward,
+      just like the disney animation
+
+e.g.
+@keyframes modalAnim {
+  0% {
+    //transform: translateX(-200%) rotate(-90deg);
+    transform: translateX(-200%) rotate(-90deg);
+    //opacity: 0;
+  }
+  10% {
+    transform: translateX(4%) rotate(4deg); // the the bounce when it comes in
+  }
+  15%, 85% { // Need to match the 15%, 85% in overlayAdnim
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-4%) rotate(-4deg); // Add the motion of ready for acceleration when it leave out
+  }
+  100% {
+    transform: translateX(200%) rotate(90deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
