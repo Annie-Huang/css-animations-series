@@ -24,3 +24,4 @@ Spinners, Loaders, and Junk — CSS Animations
 
 example7:
 Step By Step Form — CSS Animations
+Unfinished javascript, too complex to change the jquery into vanilla javascript.
